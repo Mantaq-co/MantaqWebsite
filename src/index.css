@@ -1,0 +1,232 @@
+/* src/index.css */
+@import url("https://fonts.googleapis.com/css2?family=Itim&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f3f4f5;
+  --foreground: #171717;
+  --base: #f3f4f5;
+  --primary: #e98224;
+  --secondary: #173b55;
+  --fontPoppins: "Poppins", sans-serif;
+  --fontItim: "Itim", cursive;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: var(--fontPoppins), sans-serif;
+  }
+
+  .custom-slider .slick-dots {
+    bottom: -50px !important; /* Adjust position */
+  }
+
+  .custom-slider .slick-dots li {
+    justify-content: center;
+    align-items: center;
+    width: 15px !important;
+    height: 15px !important;
+    margin: 0 5px !important; /* Spacing between dots */
+  }
+
+  .custom-slider .slick-dots li button:before {
+    font-size: 6px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    content: "";
+    text-align: center;
+    opacity: 0.25;
+    color: #000;
+  }
+
+  .custom-slider .slick-dots li button {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 50% !important;
+    background-color: #ddd !important; /* Default dot color */
+    border: none !important;
+    transition: background-color 0.3s ease !important;
+  }
+
+  .custom-slider .slick-dots li.slick-active button {
+    background-color: var(--primary) !important; /* Active dot color */
+  }
+}
+
+.modal-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+.modal-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+.modal-exit {
+  opacity: 1;
+}
+.modal-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.mobile-link {
+  width: 170px !important;
+}
+
+/* Animations */
+
+@-webkit-keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
+@keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes rotate-in-center {
+  0% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+@keyframes rotate-in-center {
+  0% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.rotate-in-center {
+  -webkit-animation: rotate-in-center 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: rotate-in-center 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.slide-right {
+  -webkit-animation: slide-right 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-right 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.fade-in {
+  -webkit-animation: fade-in 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: fade-in 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.fade-out {
+  -webkit-animation: fade-out 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: fade-out 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.card-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+.card-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+.card-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+.card-exit-active {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 300ms, transform 300ms;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-anim {
+  animation: rotate 5s infinite linear;
+}
