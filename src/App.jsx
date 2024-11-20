@@ -15,6 +15,7 @@ import "aos/dist/aos.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { CSSTransition } from "react-transition-group";
+import { ModalProvider } from "./context/modalContext";
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);
@@ -37,16 +38,18 @@ function App() {
   }, []);
   return (
     <>
-      <Wrapper>
-        <Nav />
-        <HeroSection />
-        <AboutMantaq />
-        <Services />
-        <TechStack />
-        <Testimonials />
-        <Faqs />
-        <Footer />
-      </Wrapper>
+      <ModalProvider>
+        <Wrapper>
+          <Nav />
+          <HeroSection />
+          <AboutMantaq />
+          <Services />
+          <TechStack />
+          <Testimonials />
+          <Faqs />
+          <Footer />
+        </Wrapper>
+      </ModalProvider>
       <CSSTransition
         in={isVisible}
         timeout={300}
