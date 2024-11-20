@@ -60,7 +60,7 @@ function MobileNav() {
                   }}
                   className="py-3 px-12 mobile-link block rounded-lg bg-white border-2 text-primary border-primary font-semibold hover:bg-primary hover:text-white transition-all duration-500"
                 >
-                  Contact
+                  Contact Us
                 </button>
               </li>
             </ul>
