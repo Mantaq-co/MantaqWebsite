@@ -6,10 +6,14 @@ import uiuxImage from "../assets/uiux_icon.svg";
 function Services() {
   return (
     <Row>
-      <section className="pb-20 pt-10" data-aos="fade-down" id="services">
+      <section
+        className="pb-10 md:pb-20 pt-10"
+        data-aos="fade-down"
+        id="services"
+      >
         <div className="flex flex-col items-center">
           <p className="text-primary font-semibold text-sm mb-3">Services</p>
-          <h2 className="text-4xl text-center font-bold text-poppins mb-10 max-w-[600px]">
+          <h2 className="text-3xl md:text-4xl text-center font-bold text-poppins mb-10 max-w-[600px]">
             Services Tailored to Drive Your{" "}
             <span className="text-primary">Vision</span> Forward
           </h2>

@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import Row from "../utils/Row";
 
 const FaqsCard = (props) => {
   const answerElRef = useRef();
@@ -17,7 +18,7 @@ const FaqsCard = (props) => {
       className="space-y-3 mt-5 overflow-hidden border-b"
       key={idx}
       onClick={handleOpenAnswer}
-      data-aos="fade-down-left"
+      data-aos="fade-down"
     >
       <h4 className="cursor-pointer pb-5 flex items-center justify-between text-lg text-gray-700 font-medium">
         {faqsList.q}
@@ -91,22 +92,24 @@ export default function Faqs() {
   ];
 
   return (
-    <section
-      id="faqs"
-      className="leading-relaxed max-w-screen-xl pb-20 pt-10 mx-auto px-4 md:px-8"
-    >
-      <div className="flex flex-col items-center">
-        <p className="text-primary font-semibold text-sm mb-3">Faqs</p>
-        <h2 className="text-4xl text-center font-bold text-poppins mb-10 max-w-[600px]">
-          Frequently Asked &nbsp;
-          <span className="text-primary">Questions</span>
-        </h2>
-      </div>
-      <div className="mt-14 max-w-2xl mx-auto">
-        {faqsList.map((item, idx) => (
-          <FaqsCard idx={idx} faqsList={item} />
-        ))}
-      </div>
-    </section>
+    <Row>
+      <section
+        id="faqs"
+        className="leading-relaxed max-w-screen-xl pb-10 md:pb-20 pt-10 mx-auto px-4 md:px-8"
+      >
+        <div className="flex flex-col items-center">
+          <p className="text-primary font-semibold text-sm mb-3">Faqs</p>
+          <h2 className="text-3xl md:text-4xl text-center font-bold text-poppins mb-5 md:mb-10 max-w-[600px]">
+            Frequently Asked &nbsp;
+            <span className="text-primary">Questions</span>
+          </h2>
+        </div>
+        <div className="mt-8 md:mt-14 max-w-2xl mx-auto">
+          {faqsList.map((item, idx) => (
+            <FaqsCard idx={idx} faqsList={item} />
+          ))}
+        </div>
+      </section>
+    </Row>
   );
 }

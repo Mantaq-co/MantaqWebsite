@@ -4,10 +4,10 @@ import React from "react";
 function HeroSection() {
   return (
     <Row>
-      <section className="py-20" data-aos="fade-up">
+      <section className="py-10 md:py-20" data-aos="fade-up">
         <div className="flex flex-col justify-items-center items-center">
           <div className="max-w-[700px] flex flex-col justify-center items-center">
-            <h1 className=" text-6xl font-bold text-poppins ">
+            <h1 className=" text-4xl text-center md:text-left md:text-6xl font-bold text-poppins ">
               Unlocking Innovation with Mantaq: Your Partner in{" "}
               <span className="text-primary">Intelligent Growth</span>
             </h1>
