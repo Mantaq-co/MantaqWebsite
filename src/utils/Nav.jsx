@@ -36,9 +36,13 @@ function Nav() {
           <CustomNavLink url="#testimonials">Testimonials</CustomNavLink>
           <CustomNavLink url="#faqs">Faqs</CustomNavLink>
         </div>
-        <button className="hidden md:block bg-primary text-white px-6 py-2 rounded-full border-2 border-primary hover:bg-transparent hover:text-primary hover:border-primary transition-all duration-1000">
-          Contact Us
-        </button>
+        <a
+          href="https://calendly.com/mantaq-co/30min"
+          target="blank"
+          className="hidden md:block bg-primary cursor-pointer text-white px-6 py-2 rounded-full border-2 border-primary hover:bg-transparent hover:text-primary hover:border-primary transition-all duration-1000"
+        >
+          Get Free Consultation
+        </a>
       </nav>
       <MobileNav />
     </Row>

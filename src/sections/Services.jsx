@@ -1,8 +1,11 @@
 import Row from "../utils/Row";
 import React from "react";
-import webAppImage from "../assets/web_app_icon.svg";
-import mobileAppImage from "../assets/mobile_app_icon.svg";
+import webAppImage from "../assets/web.svg";
+import mobileAppImage from "../assets/mobile.svg";
 import uiuxImage from "../assets/uiux_icon.svg";
+import nlpImage from "../assets/nlp.svg";
+import mlImage from "../assets/ml.svg";
+import mvpImage from "../assets/mvp.svg";
 function Services() {
   return (
     <Row>
@@ -21,13 +24,9 @@ function Services() {
 
         <div className="grid grid-cols-1 mt-10 md:grid-cols-2 lg:grid-cols-3 gap-10">
           <div className="flex flex-col items-center">
-            <img
-              src={webAppImage}
-              className="w-10 h-10"
-              alt="Web Development"
-            />
+            <img src={mvpImage} className="w-10 h-10" alt="Web Development" />
             <h3 className="text-2xl font-semibold text-poppins my-5">
-              Web Development
+              MVP Development{" "}
             </h3>
             <p className="text-secondary text-center max-w-[300px]">
               We design and develop custom websites that are tailored to your
@@ -53,6 +52,43 @@ function Services() {
             <img src={uiuxImage} className="w-10 h-10" alt="UI/UX Design" />
             <h3 className="text-2xl font-semibold text-poppins my-5">
               UI/UX Design
+            </h3>
+            <p className="text-secondary text-center max-w-[300px]">
+              We design user interfaces that are intuitive and visually
+              appealing.
+            </p>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 mt-10 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="flex flex-col items-center">
+            <img
+              src={webAppImage}
+              className="w-10 h-10"
+              alt="Web Development"
+            />
+            <h3 className="text-2xl font-semibold text-poppins my-5">
+              Web Development
+            </h3>
+            <p className="text-secondary text-center max-w-[300px]">
+              We design and develop custom websites that are tailored to your
+              brand and business needs.
+            </p>
+          </div>
+          <div className="flex flex-col items-center">
+            <img src={mlImage} className="w-10 h-10" alt="App Development" />
+            <h3 className="text-2xl font-semibold text-poppins my-5">
+              ML Services
+            </h3>
+            <p className="text-secondary text-center max-w-[300px]">
+              We create mobile applications that are user-friendly and
+              innovative.
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center">
+            <img src={nlpImage} className="w-10 h-10" alt="UI/UX Design" />
+            <h3 className="text-2xl font-semibold text-poppins my-5">
+              NLP Services
             </h3>
             <p className="text-secondary text-center max-w-[300px]">
               We design user interfaces that are intuitive and visually
