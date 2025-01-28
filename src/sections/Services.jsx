@@ -56,6 +56,43 @@ function Services() {
             </p>
           </div>
         </div>
+        <div className="grid grid-cols-1 mt-10 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="flex flex-col items-center">
+            <img
+              src={webAppImage}
+              className="w-10 h-10"
+              alt="Web Development"
+            />
+            <h3 className="text-2xl font-semibold text-poppins my-5">
+              Web Development
+            </h3>
+            <p className="text-secondary text-center max-w-[300px]">
+              We design and develop custom websites that are tailored to your
+              brand and business needs.
+            </p>
+          </div>
+          <div className="flex flex-col items-center">
+            <img src={mlImage} className="w-10 h-10" alt="App Development" />
+            <h3 className="text-2xl font-semibold text-poppins my-5">
+              Digital Marketing
+            </h3>
+            <p className="text-secondary text-center max-w-[300px]">
+              We create mobile applications that are user-friendly and
+              innovative.
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center">
+            <img src={nlpImage} className="w-10 h-10" alt="UI/UX Design" />
+            <h3 className="text-2xl font-semibold text-poppins my-5">
+              ML/NLP Services
+            </h3>
+            <p className="text-secondary text-center max-w-[300px]">
+              We design user interfaces that are intuitive and visually
+              appealing.
+            </p>
+          </div>
+        </div>
       </section>
     </Row>
   );
