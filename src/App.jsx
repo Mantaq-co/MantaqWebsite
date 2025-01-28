@@ -16,6 +16,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { CSSTransition } from "react-transition-group";
 import { ModalProvider } from "./context/modalContext";
+import Demo from "./sections/Demo";
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);

@@ -60,7 +60,7 @@ const TestimonialSlider = () => {
   };
 
   return (
-    <section className="testimonial-section  bg-gray-100">
+    <section className="testimonial-section ">
       <div className="container mx-auto px-4">
         <Slider {...settings} className="custom-slider">
           {testimonials.map((testimonial, index) => (
